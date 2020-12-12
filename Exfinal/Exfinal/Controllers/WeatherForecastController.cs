@@ -35,5 +35,22 @@ namespace Exfinal.Controllers
             })
             .ToArray();
         }
+        [Route("{numero}")]
+        public string Edit(int numero)
+        {
+            if (numero < 0)
+            {
+                return "ERROR";
+            }
+            if (numero == 0)
+            {
+                return "Realizado por Maria Laura Suarez";
+            }
+            if (numero > 0)
+            {
+                return "https://image.freepik.com/vector-gratis/numeros-cartel-imagen_1639-6453.jpg";
+            }
+            return "otro";
+        }
     }
 }
